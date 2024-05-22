@@ -201,11 +201,11 @@ void VCPDeviceInfoHelper::fetchDeviceInfoLegacy()
             m_deviceInfo.stackType = operation->value(QByteArrayLiteral("radio_stack_type")).toInt();
         }
 
-        if(m_deviceInfo.name.isEmpty()) {
-            finishWithError(BackendError::InvalidDevice, QStringLiteral("Failed to read device information: required fields are not present"));
-        } else {
-            advanceState();
-        }
+        //if(m_deviceInfo.name.isEmpty()) {
+        //    finishWithError(BackendError::InvalidDevice, QStringLiteral("Failed to read device information: required fields are not present"));
+        //} else {
+        advanceState();
+        //}
     });
 }
 
@@ -252,11 +252,11 @@ void VCPDeviceInfoHelper::fetchDeviceInfoProperty()
             m_deviceInfo.stackType = operation->value(QByteArrayLiteral("radio.stack.type")).toInt();
         }
 
-        if(m_deviceInfo.name.isEmpty()) {
-            finishWithError(BackendError::InvalidDevice, QStringLiteral("Failed to read device information: required fields are not present"));
-        } else {
-            advanceState();
-        }
+        //if(m_deviceInfo.name.isEmpty()) {
+        //    finishWithError(BackendError::InvalidDevice, QStringLiteral("Failed to read device information: required fields are not present"));
+        //} else {
+        advanceState();
+        //}
     });
 }
 
